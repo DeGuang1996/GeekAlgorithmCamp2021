@@ -15,15 +15,10 @@ public class MergeTwoLists {
             }
             head = head.next;
         }
-        while (l1 != null) {
+        if (l1 != null) {
             head.next = l1;
-            l1 = l1.next;
-            head = head.next;
-        }
-        while (l2 != null) {
+        } else {
             head.next = l2;
-            l2 = l2.next;
-            head = head.next;
         }
         return dummy.next;
     }
