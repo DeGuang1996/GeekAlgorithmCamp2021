@@ -15,7 +15,7 @@ public class MyCircularDeque {
 
     /** Adds an item at the front of Deque. Return true if the operation is successful. */
     public boolean insertFront(int value) {
-        if (list.size() > capacity) {
+        if (list.size() >= capacity) {
             return false;
         }
         list.add(0, value);
@@ -24,7 +24,7 @@ public class MyCircularDeque {
 
     /** Adds an item at the rear of Deque. Return true if the operation is successful. */
     public boolean insertLast(int value) {
-        if (list.size() > capacity) {
+        if (list.size() >= capacity) {
             return false;
         }
         list.add(value);
