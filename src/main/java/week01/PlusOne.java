@@ -20,9 +20,7 @@ public class PlusOne {
         }
         if (carry > 0) {
             int[] nums = new int[digits.length + 1];
-            for (int i = 1; i < nums.length; i++) {
-                nums[i] = digits[i - 1];
-            }
+            System.arraycopy(digits, 0, nums, 1, nums.length - 1);
             nums[0] = carry;
             digits = nums;
         }
